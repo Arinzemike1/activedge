@@ -15,6 +15,7 @@ const ArtistsList = ({ artists }) => {
                     <div className="store text-start">
                         <div className="title mt-3 mb-3">{name}</div>
                         <div className="red-color mb-3">{phone}</div>
+                        <div className="mb-3">{website}</div>
                     </div>
                 </Link>
             </>
