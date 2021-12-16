@@ -1,16 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ArtistsList = ({ artists }) => {
 
-    useEffect(() => {
-        console.log("artists: ", artists);
-    })
-
     const renderArtists = artists.map((artist) => {
         const { id, name, phone, website } = artist;
         return (
-            <>
+            <div key={id}>
                 <Link to={`album/${id}`}>
                     <div className="store text-start">
                         <div className="title mt-3 mb-3">{name}</div>
@@ -18,7 +14,7 @@ const ArtistsList = ({ artists }) => {
                         <div className="mb-3">{website}</div>
                     </div>
                 </Link>
-            </>
+            </div>
         );
     })
 

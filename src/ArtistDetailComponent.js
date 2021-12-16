@@ -4,11 +4,13 @@ import { useParams } from 'react-router-dom';
 import Axios from 'axios';
 import Header from '../src/components/Header';
 import ArtistsTweets from './ArtistsTweets';
+import Loader from '../src/components/Loader';
 
 const ArtistDetailComponent = () => {
     const { albumId } = useParams();
     const [albums, setAlbums] = useState([]);
     const [tweets, setTweets] = useState([]);
+    const [loader, setLoader] = useState(false);
 
     const fetchAlbums = () => {
         Axios.get(`https://jsonplaceholder.typicode.com/albums/${albumId}/photos`)
@@ -18,29 +20,37 @@ const ArtistDetailComponent = () => {
     }
 
     const fetchTweets = () => {
+        setLoader(true)
         Axios.get(`https://jsonplaceholder.typicode.com/posts/${albumId}/comments`)
             .then((response) => {
                 setTweets(response.data);
+                setLoader(false)
             })
     }
 
     useEffect(() => {
         fetchAlbums();
         fetchTweets();
-    })
+    }, [])
 
     return (
         <>
             <Header title="Tweets" />
-            <div className="album-container">
-                <ArtistsTweets tweets={tweets} />
-            </div>
+            {
+                loader ? <Loader />
+                    :
+                    <>
+                        <div className="album-container">
+                            <ArtistsTweets tweets={tweets} />
+                        </div>
 
-            <Header title="Album" />
+                        <Header title="Album" />
 
-            <div className="album-container">
-                <ArtistsDetail albums={albums}/>
-            </div>
+                        <div className="album-container">
+                            <ArtistsDetail albums={albums} />
+                        </div>
+                    </>
+            }
         </>
     )
 }
