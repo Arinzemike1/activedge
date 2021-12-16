@@ -9,14 +9,13 @@ const App = () => {
 
   return (
     <div className="">
-      <ArtistsComponent />
-      {/* <Router>
+      <Router>
         <Routes>
           <Route path="/" exact element={<ArtistsComponent />} />
           <Route path="/album/:albumId" exact element={<ArtistDetailComponent />} />
           <Route>404 Not Found!</Route>
         </Routes>
-      </Router> */}
+      </Router>
     </div>
   );
 }
