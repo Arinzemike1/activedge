@@ -16,7 +16,9 @@ const App = () => {
     }
 
     useEffect(() => {
-        fetchArtists();
+        setTimeout(() => {
+            fetchArtists()
+        }, 5000);
     }, [])
 
 
