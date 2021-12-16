@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/activedge/static/css/main.01271d4c.css",
-    "main.js": "/activedge/static/js/main.96ec8b13.js",
+    "main.js": "/activedge/static/js/main.bcc9753b.js",
     "index.html": "/activedge/index.html",
     "main.01271d4c.css.map": "/activedge/static/css/main.01271d4c.css.map",
-    "main.96ec8b13.js.map": "/activedge/static/js/main.96ec8b13.js.map"
+    "main.bcc9753b.js.map": "/activedge/static/js/main.bcc9753b.js.map"
   },
   "entrypoints": [
     "static/css/main.01271d4c.css",
-    "static/js/main.96ec8b13.js"
+    "static/js/main.bcc9753b.js"
   ]
 }
