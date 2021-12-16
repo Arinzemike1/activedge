@@ -24,7 +24,7 @@ const App = () => {
         <>
             <Header title="Artists" />
             <div className="app-container">
-                Hello bro
+                Hello my guy
                 {/* <ArtistsList artists={artists} /> */}
             </div>
         </>
