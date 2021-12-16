@@ -13,7 +13,7 @@ const App = () => {
         <Routes>
           <Route path="/" exact element={<ArtistsComponent />} />
           <Route path="/album/:albumId" exact element={<ArtistDetailComponent />} />
-          <Route>404 Not Found!</Route>
+          {/* <Route>404 Not Found!</Route> */}
         </Routes>
       </Router>
     </div>
