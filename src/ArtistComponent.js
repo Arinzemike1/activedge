@@ -8,23 +8,24 @@ const App = () => {
     const [artists, setArtists] = useState([]);
     //   const [ albums, setAlbums ] = useState([]);
 
-    const fetchArtists = () => {
-        Axios.get("https://jsonplaceholder.typicode.com/users")
-            .then((response) => {
-                setArtists(response.data);
-            })
-    }
+    // const fetchArtists = () => {
+    //     Axios.get("https://jsonplaceholder.typicode.com/users")
+    //         .then((response) => {
+    //             setArtists(response.data);
+    //         })
+    // }
 
-    useEffect(() => {
-        fetchArtists();
-    }, [])
+    // useEffect(() => {
+    //     fetchArtists();
+    // }, [])
 
 
     return (
         <>
             <Header title="Artists" />
             <div className="app-container">
-                <ArtistsList artists={artists} />
+                Hello bro
+                {/* <ArtistsList artists={artists} /> */}
             </div>
         </>
     )
