@@ -5,7 +5,7 @@ const ArtistsList = ({ artists }) => {
 
     useEffect(() => {
         console.log("artists: ", artists);
-    }, [])
+    })
 
     const renderArtists = artists.map((artist) => {
         const { id, name, phone, website } = artist;

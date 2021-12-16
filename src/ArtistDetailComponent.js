@@ -27,7 +27,7 @@ const ArtistDetailComponent = () => {
     useEffect(() => {
         fetchAlbums();
         fetchTweets();
-    }, [])
+    })
 
     return (
         <>
