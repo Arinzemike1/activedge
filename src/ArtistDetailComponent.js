@@ -31,6 +31,7 @@ const ArtistDetailComponent = () => {
     useEffect(() => {
         fetchAlbums();
         fetchTweets();
+        //eslint-disable-next-line
     }, [])
 
     return (
